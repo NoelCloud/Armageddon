@@ -1,85 +1,101 @@
 #These are   for  public
+resource "aws_subnet" "public-us-east-1a" {
+  vpc_id                  = aws_vpc.armageddon-app-usa.id
+  cidr_block              = "10.24.1.0/24"
+  availability_zone       = "us-east-1a"
+  provider = aws.usa
 
-resource "aws_subnet" "public-eu-west-1a" {
-  vpc_id                  = aws_vpc.app1.id
+  tags = {
+    Name    = "public-us-east-1a"
+    Service = "armageddon-app1"
+    Owner   = "Cloudybills"
+    Planet  = "Earth"
+  }
+}
+
+resource "aws_subnet" "public-ap-northeast-1a" {
+  vpc_id                  = aws_vpc.armageddon-app.id
   cidr_block              = "10.32.1.0/24"
-  availability_zone       = "eu-west-1a"
-  map_public_ip_on_launch = true
+  availability_zone       = "ap-northeast-1a"
+  provider = aws
 
   tags = {
-    Name    = "public-eu-west-1a"
-    Service = "application1"
-    Owner   = "Luke"
-    Planet  = "Musafar"
+    Name    = "public-ap-northeast-1a"
+    Service = "armageddon-app1"
+    Owner   = "Cloudybills"
+    Planet  = "Earth"
   }
 }
 
-resource "aws_subnet" "public-eu-west-1b" {
-  vpc_id                  = aws_vpc.app1.id
+resource "aws_subnet" "public-ap-northeast-1c" {
+  vpc_id                  = aws_vpc.armageddon-app.id
   cidr_block              = "10.32.2.0/24"
-  availability_zone       = "eu-west-1b"
-  map_public_ip_on_launch = true
+  availability_zone       = "ap-northeast-1c"
+  provider = aws
 
   tags = {
-    Name    = "public-eu-west-1b"
-    Service = "application1"
-    Owner   = "Luke"
-    Planet  = "Musafar"
+    Name    = "public-ap-northeast-1c"
+    Service = "armageddon-app1"
+    Owner   = "Cloudybills"
+    Planet  = "Earth"
   }
 }
 
 
-resource "aws_subnet" "public-eu-west-1c" {
-  vpc_id                  = aws_vpc.app1.id
+resource "aws_subnet" "public-ap-northeast-1d" {
+  vpc_id                  = aws_vpc.armageddon-app.id
   cidr_block              = "10.32.3.0/24"
-  availability_zone       = "eu-west-1c"
-  map_public_ip_on_launch = true
+  availability_zone       = "ap-northeast-1d"
+  provider = aws
 
   tags = {
-    Name    = "public-eu-west-1c"
-    Service = "application1"
-    Owner   = "Luke"
-    Planet  = "Musafar"
+    Name    = "public-ap-northeast-1d"
+    Service = "armageddon-app1"
+    Owner   = "Cloudybills"
+    Planet  = "Earth"
   }
 }
 
 #these are for private
-resource "aws_subnet" "private-eu-west-1a" {
-  vpc_id            = aws_vpc.app1.id
+resource "aws_subnet" "private-ap-northeast-1a" {
+  vpc_id            = aws_vpc.armageddon-app.id
   cidr_block        = "10.32.11.0/24"
-  availability_zone = "eu-west-1a"
+  availability_zone = "ap-northeast-1a"
+  provider = aws
 
   tags = {
-    Name    = "private-eu-west-1a"
-    Service = "application1"
-    Owner   = "Luke"
-    Planet  = "Musafar"
+    Name    = "private-ap-northeast-1a"
+    Service = "armageddon-app1"
+    Owner   = "Cloudybills"
+    Planet  = "Earth"
   }
 }
 
-resource "aws_subnet" "private-eu-west-1b" {
-  vpc_id            = aws_vpc.app1.id
+resource "aws_subnet" "private-ap-northeast-1c" {
+  vpc_id            = aws_vpc.armageddon-app.id
   cidr_block        = "10.32.12.0/24"
-  availability_zone = "eu-west-1b"
+  availability_zone = "ap-northeast-1c"
+  provider = aws
 
   tags = {
-    Name    = "private-eu-west-1b"
-    Service = "application1"
-    Owner   = "Luke"
-    Planet  = "Musafar"
+    Name    = "private-ap-northeast-1c"
+    Service = "armageddon-app1"
+    Owner   = "Cloudybills"
+    Planet  = "Earth"
   }
 }
 
 
-resource "aws_subnet" "private-eu-west-1c" {
-  vpc_id            = aws_vpc.app1.id
+resource "aws_subnet" "private-ap-northeast-1d" {
+  vpc_id            = aws_vpc.armageddon-app.id
   cidr_block        = "10.32.13.0/24"
-  availability_zone = "eu-west-1c"
+  availability_zone = "ap-northeast-1d"
+  provider = aws
 
   tags = {
-    Name    = "private-eu-west-1c"
-    Service = "application1"
-    Owner   = "Luke"
-    Planet  = "Musafar"
+    Name    = "private-ap-northeast-1d"
+    Service = "armageddon-app1"
+    Owner   = "Cloudybills"
+    Planet  = "Earth"
   }
 }

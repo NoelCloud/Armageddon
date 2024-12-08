@@ -1,10 +1,10 @@
 resource "aws_internet_gateway" "igw" {
-  vpc_id = aws_vpc.app1.id
+  vpc_id = aws_vpc.armageddon-app.id
 
   tags = {
-    Name    = "app1_IG"
-    Service = "application1"
-    Owner   = "Luke"
-    Planet  = "Musafar"
+    Name    = "armageddon-app_IG"
+    Service = "armageddon-app1"
+    Owner   = "Cloudybills"
+    Planet  = "Earth"
   }
 }

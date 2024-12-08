@@ -1,5 +1,5 @@
 resource "aws_route_table" "private" {
-  vpc_id = aws_vpc.app1.id
+  vpc_id = aws_vpc.armageddon-app.id
 
   route = [
     {
@@ -25,7 +25,7 @@ resource "aws_route_table" "private" {
 }
 
 resource "aws_route_table" "public" {
-  vpc_id = aws_vpc.app1.id
+  vpc_id = aws_vpc.armageddon-app.id
 
   route = [
     {
@@ -50,34 +50,34 @@ resource "aws_route_table" "public" {
   }
 }
 
-resource "aws_route_table_association" "private-eu-west-1a" {
-  subnet_id      = aws_subnet.private-eu-west-1a.id
+resource "aws_route_table_association" "private-ap-northeast-1a" {
+  subnet_id      = aws_subnet.private-ap-northeast-1a.id
   route_table_id = aws_route_table.private.id
 }
 
-resource "aws_route_table_association" "private-eu-west-1b" {
-  subnet_id      = aws_subnet.private-eu-west-1b.id
+resource "aws_route_table_association" "private-ap-northeast-1c" {
+  subnet_id      = aws_subnet.private-ap-northeast-1c.id
   route_table_id = aws_route_table.private.id
 }
-resource "aws_route_table_association" "private-eu-west-1c" {
-  subnet_id      = aws_subnet.private-eu-west-1c.id
+resource "aws_route_table_association" "private-ap-northeast-1d" {
+  subnet_id      = aws_subnet.private-ap-northeast-1d.id
   route_table_id = aws_route_table.private.id
 }
 
 
 #public
 
-resource "aws_route_table_association" "public-eu-west-1a" {
-  subnet_id      = aws_subnet.public-eu-west-1a.id
+resource "aws_route_table_association" "public-ap-northeast-1a" {
+  subnet_id      = aws_subnet.public-ap-northeast-1a.id
   route_table_id = aws_route_table.public.id
 }
 
-resource "aws_route_table_association" "public-eu-west-1b" {
-  subnet_id      = aws_subnet.public-eu-west-1b.id
+resource "aws_route_table_association" "public-ap-northeast-1c" {
+  subnet_id      = aws_subnet.public-ap-northeast-1c.id
   route_table_id = aws_route_table.public.id
 }
 
-resource "aws_route_table_association" "public-eu-west-1c" {
-  subnet_id      = aws_subnet.public-eu-west-1c.id
+resource "aws_route_table_association" "public-ap-northeast-1d" {
+  subnet_id      = aws_subnet.public-ap-northeast-1d.id
   route_table_id = aws_route_table.public.id
 }
